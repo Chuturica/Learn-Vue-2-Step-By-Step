@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
         <title>Learn Vue 2 Step By Step</title>
 </head>
 <body>
-    <input type="text" id="input">
+    <div id="root">
+        <input type="text" id="input" v-model="message">
 
-    <script></script>
+        <p>The value of the input is: {{ message }}.</p>
+    </div>
+    
 
-    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js">
-        let data = {
-            message: 'Hello World'
-        };
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+
+    <script>
+
+        
+        new Vue({
+            el: '#root',
+            data: {
+                message: 'Hello World'
+            }
+        })
 
     </script>
     
