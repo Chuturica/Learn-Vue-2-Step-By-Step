@@ -1,17 +1,33 @@
 Vue.component('message', {
-    props:['title', 'body'],
+    props: ['title', 'body'],
+
+    data() {
+        return {
+            isVisible: true
+        };
+    },
+
     template: `
         
-        <article class="message">
+        <article class="message" v-show="isVisible">
             <div class="message-header">
-                <p>{{ title}}</p>
-                <button class="delete" aria-label="delete"></button>
+                {{ title}}
+
+                <button type="button" @click="hideModel">x</button>
+
             </div>
+            
             <div class="message-body">
                 {{ body }}
             </div>
         </article>
-    `
+    `,
+
+    methods: {
+        hideModel() {
+            this.isVisible = false;
+        }
+    }
 });
 
 
