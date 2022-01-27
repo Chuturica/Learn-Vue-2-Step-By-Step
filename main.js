@@ -36,5 +36,9 @@ Vue.component('modal', {
 
 
 new Vue({
-    el: '#root'
+    el: '#root',
+
+    data: {
+        showModal: false
+    },
 })
