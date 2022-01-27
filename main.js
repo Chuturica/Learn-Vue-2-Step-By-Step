@@ -3,7 +3,7 @@ Vue.component('coupon',{
 
     methods: {
         onCouponApplied(){
-            alert('applierd!');
+            this.$emit('applied' );
         }
     }
 });
@@ -11,9 +11,13 @@ Vue.component('coupon',{
 new Vue({
     el: '#root',
 
+    data: {
+        couponApplied: false
+    },
+
     methods: {
         onCouponApplied(){
-            alert('It vas applied!');
+            this.couponApplied= true;
         }
     }
 
