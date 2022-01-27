@@ -7,11 +7,11 @@ Vue.component('modal',{
                     <p class="modal-card-title">
                         <slot name="header"></slot>
                     </p>
-                    
+
                     <button class="delete" aria-label="close"></button>
                 </header>
                 <section class="modal-card-body">
-                    Templorary content for now
+                    <slot></slot>
                 </section>
                 <footer class="modal-card-foot">
                     <button class="button is-success">Save changes</button>
