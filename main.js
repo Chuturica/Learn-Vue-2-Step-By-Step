@@ -1,4 +1,4 @@
-Vue.component('message', {
+Vue.component('modal', {
     props: ['title', 'body'],
 
     data() {
@@ -9,18 +9,22 @@ Vue.component('message', {
 
     template: `
         
-        <article class="message" v-show="isVisible">
-            <div class="message-header">
-                {{ title}}
-
-                <button type="button" @click="hideModel">x</button>
-
-            </div>
-            
-            <div class="message-body">
-                {{ body }}
-            </div>
-        </article>
+        <div class="modal is-active">
+            <div class="modal-background"></div>
+                <div class="modal-content">
+                    <!-- Any other Bulma elements you want -->
+                    <div class="box">
+                        <p>
+                            Let's move on to our next practical component exercise. A traditional modal box provides some key
+                            learning points. In particular, we're going to learn how to communicate between components. What
+                            happens if one Vue instance or component needs to be notified when a particular action takes place?
+                            How might we broadcast such things?
+                        </p>
+                    </div>
+                    
+                </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
     `,
 
     methods: {
